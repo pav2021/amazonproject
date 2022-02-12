@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<parameter name="validemail" value="12345abc@gmail.com"></parameter>
-<parameter name="invalidemail" value="abcdefg@gmail.com"></parameter>
-<parameter name="validpassword" value="abbcdsser"></parameter>
-<parameter name="invalidpassword" value="abcdefg1234"></parameter>
-  <test thread-count="5" name="Test">
-    <packages>
-      <package name="test"/>
-    </packages>
-  </test> <!-- Test -->
+	<parameter name="validemail" value="abcdef123@gmail.com"></parameter>
+	<parameter name="invalidemail" value="abcdefg@gmail.com"></parameter>
+	<parameter name="validpassword" value="12345qwert"></parameter>
+	<parameter name="invalidpassword" value="abcdefg1234"></parameter>
+	<test thread-count="5" name="Test">
+		<packages>
+			<package name="test" />
+		</packages>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

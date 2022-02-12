@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">9 methods, 1 failed,   8 passed</span>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="test.LoginValidation" class="method navigator-link" hash-for-method="validateDeliveryPincode">validateDeliveryPincode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="test.LoginValidation" class="method navigator-link" hash-for-method="validateIframe">validateIframe</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -180,9 +185,43 @@
                   </a> <!-- validateDeliveryPincode -->
                   <span class="method-name">validateDeliveryPincode</span>
                   <div class="stack-trace">java.lang.AssertionError: this is not the pin expected [true] but found [false]
-	at test.LoginValidation.validateDeliveryPincode(LoginValidation.java:121)
+	at test.LoginValidation.validateDeliveryPincode(LoginValidation.java:115)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateIframe">
+                  </a> <!-- validateIframe -->
+                  <span class="method-name">validateIframe</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@class=&apos;a-link-normal sp_hqp_shared_adLink a-text-normal&apos;]&quot;}
+  (Session info: chrome=98.0.4758.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-EMDLV1KE&apos;, ip: &apos;10.0.0.110&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\pavit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55227}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ead7012aded261417b63d1c40070b41d
+*** Element info: {Using=xpath, value=//a[@class=&apos;a-link-normal sp_hqp_shared_adLink a-text-normal&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+	at pom.NavigateActions.iframeClickAction(NavigateActions.java:229)
+	at test.LoginValidation.validateIframe(LoginValidation.java:126)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -315,48 +354,52 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(9);
+data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validateMobilePrice')
 data.setCell(0, 2, 'test.LoginValidation')
-data.setCell(0, 3, 6909);
+data.setCell(0, 3, 7197);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'invalidEmailInvalidPassword')
+data.setCell(1, 1, 'validateIframe')
 data.setCell(1, 2, 'test.LoginValidation')
-data.setCell(1, 3, 3858);
+data.setCell(1, 3, 5150);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validEmailValidPassword')
+data.setCell(2, 1, 'validateDeliveryPincode')
 data.setCell(2, 2, 'test.LoginValidation')
-data.setCell(2, 3, 3658);
+data.setCell(2, 3, 3972);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateDeliveryPincode')
+data.setCell(3, 1, 'validateNewReleases')
 data.setCell(3, 2, 'test.LoginValidation')
-data.setCell(3, 3, 3581);
+data.setCell(3, 3, 3922);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validateCreateaWishList')
+data.setCell(4, 1, 'validEmailValidPassword')
 data.setCell(4, 2, 'test.LoginValidation')
-data.setCell(4, 3, 1768);
+data.setCell(4, 3, 3894);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'validateNewReleases')
+data.setCell(5, 1, 'invalidEmailInvalidPassword')
 data.setCell(5, 2, 'test.LoginValidation')
-data.setCell(5, 3, 1683);
+data.setCell(5, 3, 3768);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'validateAmazonCash')
 data.setCell(6, 2, 'test.LoginValidation')
-data.setCell(6, 3, 1343);
+data.setCell(6, 3, 3423);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'validateURL')
+data.setCell(7, 1, 'validateCreateaWishList')
 data.setCell(7, 2, 'test.LoginValidation')
-data.setCell(7, 3, 114);
+data.setCell(7, 3, 2029);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'validateTitle')
 data.setCell(8, 2, 'test.LoginValidation')
-data.setCell(8, 3, 18);
+data.setCell(8, 3, 45);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'validateURL')
+data.setCell(9, 2, 'test.LoginValidation')
+data.setCell(9, 3, 35);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -368,27 +411,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
+              <span class="reporter-method-name">validateAmazonCash</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/gp/browse.html?node=17321486011&ref_=footer_cash_ca_en</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
               <span class="reporter-method-name">validateNewReleases</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/gp/new-releases/?ref_=nav_cs_newreleases</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">validateTitle</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">this is the correct Title>>Amazon.ca: Low Prices – Fast Shipping – Millions of Items</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">invalidEmailInvalidPassword(abcdefg@gmail.com, abcdefg1234)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/ap/signin</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">validEmailValidPassword(manjunath020@gmail.com, Manju1982$)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">the login is successful https://www.amazon.ca/ap/signin</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
@@ -398,21 +429,33 @@ return data;
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">validateURL</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">this is the correct URL>>https://www.amazon.ca/</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
               <span class="reporter-method-name">validateCreateaWishList</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/hz/wishlist/intro</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">validateAmazonCash</span>
+              <span class="reporter-method-name">invalidEmailInvalidPassword(abcdefg@gmail.com, abcdefg1234)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/gp/browse.html?node=17321486011&ref_=footer_cash_ca_en</span>
+                <span class="reporter-method-output">this is a valid Create a wishlist page https://www.amazon.ca/ap/signin</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateURL</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">this is the correct URL>>https://www.amazon.ca/</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateTitle</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">this is the correct Title>>Amazon.ca: Low Prices – Fast Shipping – Millions of Items</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validEmailValidPassword(manjunath020@gmail.com, Manju1982$)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">the login is successful https://www.amazon.ca/ap/signin</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -449,48 +492,54 @@ return data;
               <div class="chronological-class-name">test.LoginValidation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validateURL</span>
-                <span class="method-start">4567 ms</span>
+                <span class="method-start">5162 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateTitle</span>
-                <span class="method-start">4692 ms</span>
+                <span class="method-start">5203 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateCreateaWishList</span>
-                <span class="method-start">4715 ms</span>
+                <span class="method-start">5251 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateNewReleases</span>
-                <span class="method-start">6490 ms</span>
+                <span class="method-start">7283 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateAmazonCash</span>
-                <span class="method-start">8178 ms</span>
+                <span class="method-start">11207 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">invalidEmailInvalidPassword(abcdefg@gmail.com, abcdefg1234)</span>
-                <span class="method-start">9528 ms</span>
+                <span class="method-start">14633 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validEmailValidPassword(manjunath020@gmail.com, Manju1982$)</span>
-                <span class="method-start">13389 ms</span>
+                <span class="method-start">18403 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateMobilePrice</span>
-                <span class="method-start">17048 ms</span>
+                <span class="method-start">22300 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">validateDeliveryPincode</span>
-                <span class="method-start">23957 ms</span>
+                <span class="method-start">29498 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateIframe</span>
+                <span class="method-start">33475 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.Baseclass</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">27619 ms</span>
+                <span class="method-start">38673 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

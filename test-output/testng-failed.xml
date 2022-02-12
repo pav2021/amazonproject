@@ -9,6 +9,7 @@
     <classes>
       <class name="test.LoginValidation">
         <methods>
+          <include name="validateIframe"/>
           <include name="afterSuite"/>
           <include name="validateDeliveryPincode"/>
           <include name="beforeSuite"/>
